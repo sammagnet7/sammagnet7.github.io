@@ -2,14 +2,25 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Redirecting...</title>
+    <title>Redirecting to Portfolio...</title>
     <meta name="referrer" content="no-referrer">
-    <meta http-equiv="refresh" content="0; url=https://www.cse.iitb.ac.in/~soumik/index.html">
 </head>
 <body style="background-color: #020617;">
     <script>
-        // Instantly redirects to the exact file while wiping the current history state
-        window.location.replace("https://www.cse.iitb.ac.in/~soumik/index.htm");
+        // 1. Create an invisible link element
+        const cleanLink = document.createElement('a');
+        
+        // 2. Set the destination
+        cleanLink.href = 'https://www.cse.iitb.ac.in/~soumik/index.html';
+        
+        // 3. Force the browser to strip all origin/referrer data
+        cleanLink.rel = 'noreferrer';
+        
+        // 4. Inject it into the page
+        document.body.appendChild(cleanLink);
+        
+        // 5. Simulate a human click instantly
+        cleanLink.click();
     </script>
 </body>
 </html>
