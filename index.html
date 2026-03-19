@@ -1,156 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connecting to Soumik Dutta's Server...</title>
-    <style>
-        body {
-            background-color: #020617;
-            color: #f8fafc;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-        }
-
-        .gateway-container {
-            text-align: center;
-            background: rgba(30, 41, 59, 0.4);
-            padding: 40px 50px;
-            border-radius: 16px;
-            border: 1px solid rgba(16, 185, 129, 0.2);
-            box-shadow: 0 0 30px rgba(16, 185, 129, 0.05);
-            backdrop-filter: blur(10px);
-            max-width: 400px;
-            animation: fadeIn 0.8s ease-out;
-        }
-
-        /* Network Pulse Animation */
-        .radar {
-            position: relative;
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 30px auto;
-        }
-
-        .radar-core {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 16px;
-            height: 16px;
-            background-color: #10b981;
-            border-radius: 50%;
-            box-shadow: 0 0 15px #10b981;
-        }
-
-        .radar-ring {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            border: 2px solid #10b981;
-            border-radius: 50%;
-            opacity: 0;
-            animation: pulse 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-        }
-
-        .radar-ring:nth-child(2) { animation-delay: 0.6s; }
-        .radar-ring:nth-child(3) { animation-delay: 1.2s; }
-
-        @keyframes pulse {
-            0% { width: 16px; height: 16px; opacity: 1; border-width: 2px; }
-            100% { width: 100px; height: 100px; opacity: 0; border-width: 1px; }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        h2 {
-            margin: 0 0 12px 0;
-            font-size: 1.5rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
-        p {
-            color: #94a3b8;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        .enter-btn {
-            background-color: transparent;
-            color: #10b981;
-            padding: 12px 28px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            border: 2px solid #10b981;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-        }
-
-        .enter-btn:hover {
-            background-color: #10b981;
-            color: #020617;
-            box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
-            transform: translateY(-2px);
-        }
-
-        .enter-btn svg {
-            width: 18px;
-            height: 18px;
-        }
-    </style>
+    <title>Redirecting to Portfolio...</title>
+    <meta name="referrer" content="no-referrer">
 </head>
-<body>
-
-    <div class="gateway-container">
-        <div class="radar">
-            <div class="radar-core"></div>
-            <div class="radar-ring"></div>
-            <div class="radar-ring"></div>
-            <div class="radar-ring"></div>
-        </div>
-        
-        <h2>Secure Gateway</h2>
-        <p>Routing to IIT Bombay CSE Server...<br>If the auto-redirect is blocked, please initialize manually.</p>
-        
-        <a href="https://www.cse.iitb.ac.in/~soumik/index.html" 
-           target="_blank" 
-           rel="noreferrer noopener"
-           class="enter-btn">
-           <span>Initialize Connection</span>
-           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-               <line x1="5" y1="12" x2="19" y2="12"></line>
-               <polyline points="12 5 19 12 12 19"></polyline>
-           </svg>
-        </a>
-    </div>
-
+<body style="background-color: #020617;">
     <script>
-        // Automatically attempt to open the window without a referrer
-        window.onload = function() {
-            // Added a slight 800ms delay so the user actually sees the cool animation before it redirects!
-            setTimeout(() => {
-                window.open("https://www.cse.iitb.ac.in/~soumik/index.html", "_blank", "noreferrer,noopener");
-            }, 800); 
-        }
+        // 1. Create an invisible link element
+        const cleanLink = document.createElement('a');
+        
+        // 2. Set the destination
+        cleanLink.href = 'https://www.cse.iitb.ac.in/~soumik/index.html';
+        
+        // 3. Force the browser to strip all origin/referrer data
+        cleanLink.rel = 'noreferrer';
+        
+        // 4. Inject it into the page
+        document.body.appendChild(cleanLink);
+        
+        // 5. Simulate a human click instantly
+        cleanLink.click();
     </script>
 </body>
 </html>
