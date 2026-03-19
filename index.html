@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Redirecting to Soumik Dutta's Portfolio...</title>
-    <meta name="referrer" content="no-referrer">
-    <meta http-equiv="refresh" content="0; url=https://www.cse.iitb.ac.in/~soumik/">
+    <title>Redirecting to Soumik Dutta's Profile...</title>
 </head>
-<body>
-    <p>If you are not redirected automatically, <a href="https://www.cse.iitb.ac.in/~soumik/" rel="noreferrer">click here</a>.</p>
+<body style="background-color: #020617; color: #10b981; font-family: sans-serif; text-align: center; padding-top: 20%;">
+    
+    <h2>Click below to view my portfolio</h2>
+    <p>Due to IIT Bombay server security, this link must be opened in a clean tab.</p>
+    
+    <a href="https://www.cse.iitb.ac.in/~soumik/index.html" 
+       target="_blank" 
+       rel="noreferrer noopener"
+       style="background-color: #10b981; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px; display: inline-block;">
+       Go to Portfolio
+    </a>
+
     <script>
-        // JS fallback that replaces the current history state
-        window.location.replace("https://www.cse.iitb.ac.in/~soumik/index.html");
+        // Automatically attempt to open the window without a referrer
+        window.onload = function() {
+            window.open("https://www.cse.iitb.ac.in/~soumik/index.html", "_blank", "noreferrer,noopener");
+        }
     </script>
 </body>
 </html>
